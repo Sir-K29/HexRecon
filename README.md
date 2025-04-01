@@ -72,15 +72,15 @@ python3 main.py
 ```
 This will launch the same GUI interface as described above.
 
-Main Functionalities
+### Main Functionalities
 
-Plugin-Based Architecture
+**Plugin-Based Architecture**
 
 Dynamically loads Python plugins from the designated plugins directory.
 
 Each plugin can define its own commands and required external tools.
 
-Graphical User Interface (GUI)
+**Graphical User Interface (GUI)**
 
 Built with PyQt5, the GUI provides:
 
@@ -90,11 +90,11 @@ A dashboard to monitor scan progress, CPU, and memory usage in real time.
 
 A plugins tab for managing and editing plugin settings.
 
-Asynchronous Scanning
+**Asynchronous Scanning**
 
 Utilizes worker threads to execute scan commands concurrently without freezing the user interface.
 
-Real-Time Reporting
+**Real-Time Reporting**
 
 After completing scans, the framework can:
 
@@ -102,7 +102,7 @@ Export results as CSV.
 
 Generate detailed HTML and PDF reports grouped by target and tool.
 
-Utility Functions
+**Utility Functions**
 
 Includes helper functions for logging, sanitizing input, managing file paths, and executing shell commands with proper process management.
 
