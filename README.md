@@ -2,7 +2,7 @@
 
 A modular pentesting framework with a plugin architecture and an intuitive graphical interface. The framework supports dynamic loading of plugins, real-time scanning, and report generation in both HTML and PDF formats.
 
-**Virtual Environment Setup**
+## **Virtual Environment Setup**
 
 To keep your dependencies isolated, it is recommended to create a Python virtual environment.
 
@@ -40,7 +40,7 @@ The package provides an entry point named hexrecon. Simply run:
 ```bash
 hexrecon
 ```
-This will open the HexRecon GUI, where you can:
+### This will open the HexRecon GUI, where you can:
 
 Select Tools: Choose from available plugins for scanning.
 
@@ -56,7 +56,7 @@ Generate Reports: After a scan, generate CSV, HTML, or PDF reports.
 
 
 
-**Alternative Usage Method**
+## **Alternative Usage Method**
 
 If you prefer to run the code without using the package entry point, you can do so by running the main script directly.
 
