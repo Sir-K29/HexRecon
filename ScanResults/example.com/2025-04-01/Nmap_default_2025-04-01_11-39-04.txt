@@ -1,0 +1,11 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-04-01 11:38 CEST
+Nmap scan report for example.com (23.215.0.136)
+Host is up (0.017s latency).
+Other addresses for example.com (not scanned): 23.192.228.84 23.192.228.80 96.7.128.198 96.7.128.175 23.215.0.138 2600:1406:bc00:53::b81e:94ce 2600:1406:bc00:53::b81e:94c8 2600:1406:3a00:21::173e:2e66 2600:1406:3a00:21::173e:2e65 2600:1408:ec00:36::1736:7f31 2600:1408:ec00:36::1736:7f24
+rDNS record for 23.215.0.136: a23-215-0-136.deploy.static.akamaitechnologies.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 6.40 seconds

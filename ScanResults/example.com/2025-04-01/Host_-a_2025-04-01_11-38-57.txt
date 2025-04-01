@@ -1,0 +1,31 @@
+Trying "example.com"
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52445
+;; flags: qr rd ra; QUERY: 1, ANSWER: 17, AUTHORITY: 0, ADDITIONAL: 2
+
+;; QUESTION SECTION:
+;example.com.			IN	ANY
+
+;; ANSWER SECTION:
+example.com.		450	IN	TXT	"v=spf1 -all"
+example.com.		450	IN	TXT	"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"
+example.com.		299	IN	AAAA	2600:1408:ec00:36::1736:7f24
+example.com.		299	IN	AAAA	2600:1408:ec00:36::1736:7f31
+example.com.		299	IN	AAAA	2600:1406:3a00:21::173e:2e65
+example.com.		299	IN	AAAA	2600:1406:3a00:21::173e:2e66
+example.com.		299	IN	AAAA	2600:1406:bc00:53::b81e:94c8
+example.com.		299	IN	AAAA	2600:1406:bc00:53::b81e:94ce
+example.com.		450	IN	NS	a.iana-servers.net.
+example.com.		450	IN	NS	b.iana-servers.net.
+example.com.		44	IN	A	23.215.0.138
+example.com.		44	IN	A	96.7.128.175
+example.com.		44	IN	A	96.7.128.198
+example.com.		44	IN	A	23.192.228.80
+example.com.		44	IN	A	23.192.228.84
+example.com.		44	IN	A	23.215.0.136
+example.com.		450	IN	MX	0 .
+
+;; ADDITIONAL SECTION:
+a.iana-servers.net.	450	IN	A	199.43.135.53
+b.iana-servers.net.	450	IN	A	199.43.133.53
+
+Received 457 bytes from 10.0.2.3#53 in 11 ms
