@@ -2,7 +2,7 @@
 
 A modular pentesting framework with a plugin architecture and an intuitive graphical interface. The framework supports dynamic loading of plugins, real-time scanning, and report generation in both HTML and PDF formats.
 
-Virtual Environment Setup
+**Virtual Environment Setup**
 
 To keep your dependencies isolated, it is recommended to create a Python virtual environment.
 
@@ -54,7 +54,9 @@ Manage Plugins: Enable/disable plugins and edit their descriptions.
 
 Generate Reports: After a scan, generate CSV, HTML, or PDF reports.
 
-Alternative Usage
+
+
+**Alternative Usage Method**
 
 If you prefer to run the code without using the package entry point, you can do so by running the main script directly.
 
@@ -104,8 +106,10 @@ Utility Functions
 
 Includes helper functions for logging, sanitizing input, managing file paths, and executing shell commands with proper process management.
 
-Summary
+**Summary**
 
 This pentest framework provides a robust and extensible environment for running security scans. Whether you choose to use the GUI or run the script directly, the tool supports modular testing, real-time monitoring, and comprehensive reporting, making it a valuable asset for pentesters.
 
 Happy Testing!
+
+
