@@ -60,7 +60,7 @@ If you prefer to run the code without using the package entry point, you can do 
 
 1. Extract main.py
 
-Take the main.py file from the pentest folder.
+Take the main.py file out from the pentest folder.
 
 2. Run the Script
 
