@@ -148,7 +148,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("HexRecon GUI")
-        self.resize(1300, 900)
+        self.resize(1600, 900)
 
         # Setup system tray icon for error notifications.
         self.tray_icon = QSystemTrayIcon(QIcon("icon.png"), self)
