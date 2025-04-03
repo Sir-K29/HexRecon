@@ -1,4 +1,4 @@
-# Pentest Framework
+# HexRecon
 
 A modular pentesting framework with a plugin system, real-time scanning, and report generation in HTML and PDF formats.
 
