@@ -51,7 +51,6 @@ This will open the HexRecon GUI, where you can:
 - **Select Tools**: Choose from available plugins for scanning.
 - **Add Targets**: Enter target domains or IP addresses.
 - **Start Scanning**: Execute the scan with real-time progress updates.
-- **Monitor Dashboard**: View progress metrics, CPU, and memory usage.
 - **Manage Plugins**: Enable/disable plugins and edit their descriptions.
 - **Generate Reports**: After a scan, generate CSV, HTML, or PDF reports.
 
@@ -67,7 +66,6 @@ This will open the HexRecon GUI, where you can:
 Built with PyQt5, the GUI provides:
 
 - A **scan tab** for selecting plugins and entering targets.
-- A **dashboard** to monitor scan progress, CPU, and memory usage in real time.
 - A **plugins tab** for managing and editing plugin settings.
 
 ### Asynchronous Scanning
