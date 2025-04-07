@@ -159,15 +159,13 @@ class MainWindow(QMainWindow):
         self.tray_icon.setContextMenu(tray_menu)
         self.tray_icon.show()
 
-        # Create tabs (Scan, Dashboard, Plugins).
+        # Create tabs (Scan, Plugins).
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
         self.scan_tab = self.create_scan_tab()
-        self.dashboard_tab = self.create_dashboard_tab()
         self.plugin_tab = self.create_plugin_tab()
 
         self.tabs.addTab(self.scan_tab, "Scan")
-        self.tabs.addTab(self.dashboard_tab, "Dashboard")
         self.tabs.addTab(self.plugin_tab, "Plugins")
 
         # Menu bar.
@@ -283,25 +281,6 @@ def run(target, command):
         splitter.addWidget(right_widget)
         splitter.setStretchFactor(0, 1)
         splitter.setStretchFactor(1, 1)
-        return widget
-
-    def create_dashboard_tab(self):
-        widget = QWidget()
-        layout = QVBoxLayout(widget)
-        self.metrics_label = QLabel("Tasks: 0 / 0 | Elapsed: 0s | Remaining: N/A")
-        self.metrics_label.setToolTip("Displays completed tasks, elapsed time, and estimated time remaining")
-        layout.addWidget(self.metrics_label)
-        self.plot_widget = pg.PlotWidget(title="Per-Tool Scan Progress")
-        self.plot_widget.setLabel('left', 'Progress (%)')
-        self.plot_widget.setLabel('bottom', 'Time (s)')
-        self.plot_widget.addLegend()
-        layout.addWidget(self.plot_widget)
-        self.resource_plot = pg.PlotWidget(title="CPU and Memory Usage")
-        self.resource_plot.setLabel('left', 'Usage (%)')
-        self.resource_plot.setLabel('bottom', 'Time (s)')
-        self.cpu_curve = self.resource_plot.plot([], [], pen=pg.mkPen(color='g', width=2), name="CPU")
-        self.mem_curve = self.resource_plot.plot([], [], pen=pg.mkPen(color='b', width=2), name="Memory")
-        layout.addWidget(self.resource_plot)
         return widget
 
     def create_plugin_tab(self):
