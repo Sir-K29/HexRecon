@@ -6,7 +6,7 @@ import datetime
 import logging
 import subprocess
 import re
-import psutil  # For CPU and memory monitoring
+import psutil 
 
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QFileDialog, QVBoxLayout,
