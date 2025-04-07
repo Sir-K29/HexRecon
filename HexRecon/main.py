@@ -17,8 +17,6 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtCore import QThread, pyqtSignal, QTimer, Qt
 from PyQt5.QtGui import QIcon
 
-import pyqtgraph as pg
-
 from pentest import config, utils
 from pentest.plugin_manager import load_plugins, Plugin
 
