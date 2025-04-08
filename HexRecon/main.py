@@ -6,7 +6,7 @@ import datetime
 import logging
 import subprocess
 import re
-import psutil 
+import psutil  # For CPU and memory monitoring
 
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QFileDialog, QVBoxLayout,
@@ -14,7 +14,7 @@ from PyQt5.QtWidgets import (
     QLabel, QProgressBar, QMessageBox, QDialog, QAction, QLineEdit, QTabWidget,
     QCheckBox, QFormLayout, QSplitter, QComboBox, QSystemTrayIcon, QMenu, QInputDialog
 )
-from PyQt5.QtCore import QThread, pyqtSignal, QTimer, Qt
+from PyQt5.QtCore import QThread, pyqtSignal, Qt
 from PyQt5.QtGui import QIcon
 
 from pentest import config, utils
@@ -194,13 +194,6 @@ class MainWindow(QMainWindow):
         self.worker = None
         self.scan_start_time = None
 
-        # Dashboard timers and data.
-        self.dashboard_timer = QTimer()
-        self.dashboard_timer.timeout.connect(self.update_dashboard)
-        self.chart_data = {}  # key: tool name, value: (times list, progress list)
-        self.cpu_data = []
-        self.mem_data = []
-        self.chart_start_time = None
 
     # --- New Method: create_new_plugin ---
     def create_new_plugin(self):
@@ -442,7 +435,6 @@ def run(target, command):
             self.chart_data[plugin.name] = ([], [])
         self.cpu_data = []
         self.mem_data = []
-        self.dashboard_timer.start(1000)  # Update every second.
         self.worker = ScanWorker(grouped_plugins, targets)
         self.worker.progress_update.connect(self.append_scan_log)
         self.worker.progress_percent.connect(self.progress_bar.setValue)
@@ -470,7 +462,6 @@ def run(target, command):
     def scan_finished(self):
         self.append_scan_log("<span style='color: blue;'>Scan finished.</span>")
         self.start_button.setEnabled(True)
-        self.dashboard_timer.stop()
         targets_reports = {}
         for result in scan_results_global:
             target = result['target']
